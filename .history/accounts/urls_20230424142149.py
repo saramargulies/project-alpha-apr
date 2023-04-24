@@ -1,5 +1,5 @@
 from django.urls import path
-from accounts.views import user_login, logout_view
+from accounts.views import user_login
 
 # logout_view, signup_view
 
