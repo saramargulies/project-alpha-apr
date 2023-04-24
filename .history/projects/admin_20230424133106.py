@@ -5,4 +5,4 @@ from projects.models import Project
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ("name", "owner", "description")
+    list_display = ("name", "owner", )
