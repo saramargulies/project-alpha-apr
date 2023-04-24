@@ -1,6 +1,5 @@
-from django.shortcuts import render, redirect
-from accounts.forms import LoginForm
-from django.contrib.auth import login, authenticate
+from django.shortcuts import render
+
 
 
 def user_login(request):
