@@ -8,9 +8,5 @@ class Project(models.Model):
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         related_name="projects",
-        on_delete=models.CASCADE,
-        null=True,
+        on_delete=
     )
-
-    def __str__(self):
-        return self.name

@@ -7,10 +7,4 @@ class Project(models.Model):
     description = models.TextField()
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        related_name="projects",
-        on_delete=models.CASCADE,
-        null=True,
     )
-
-    def __str__(self):
-        return self.name
