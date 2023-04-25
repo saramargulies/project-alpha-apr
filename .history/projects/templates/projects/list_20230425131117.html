@@ -7,14 +7,12 @@ Projects
 {% block content %}
 <div>
     <h1>My Projects</h1>
-    <p>    
-        <a href="{% url "create_project" %}">Create a new project</a>
-    </p>
     {% if not projects %}
     <p>
         You are not assigned to any projects
     </p>
     {% else %}
+    <a href="{% url "create_project %}">Create</a>
     <table>
         <thead>
             <tr>

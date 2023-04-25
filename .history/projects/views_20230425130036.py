@@ -24,15 +24,15 @@ def show_project(request, id):
 
 
 @login_required(redirect_field_name="login")
-def create_project(request):
+def create_receipt(request):
     if request.method == "POST":
         form = ProjectForm(request.POST)
         if form.is_valid():
-            project = form.save(False)
-            project.purchaser = request.user
-            project.save()
-            return redirect("list_projects")
+            receipt = form.save(False)
+            receipt.purchaser = request.user
+            receipt.save()
+            return redirect("home")
     else:
         form = ProjectForm()
     context = {"form": form}
-    return render(request, "projects/create.html", context)
+    return render(request, "receipts/create.html", context)

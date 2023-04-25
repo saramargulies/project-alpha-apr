@@ -24,7 +24,7 @@ def show_project(request, id):
 
 
 @login_required(redirect_field_name="login")
-def create_project(request):
+def create_receipt(request):
     if request.method == "POST":
         form = ProjectForm(request.POST)
         if form.is_valid():
