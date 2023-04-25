@@ -18,9 +18,9 @@ def create_task(request):
 
 
 @login_required(redirect_field_name="login")
-def show_my_tasks(request):
+def show_my_tasks(request, id):
     tasks = Task.objects.filter(assignee=request.user)
     context = {
         "tasks": tasks,
     }
-    return render(request, "tasks/detail.html", context)
+    return render(request, "projects/detail.html", context)
